@@ -15,7 +15,7 @@ function App() {
         const response = await axios.get(
           "https://raw.githubusercontent.com/rd-astros/hiring-resources/master/pitches.json"
         );
-        console.log(response.data.queryResults.row);
+        // console.log(response.data.queryResults.row);
         setData(response.data.queryResults.row);
       } catch (error) {
         console.log(error);
@@ -26,13 +26,13 @@ function App() {
   }, []);
 
   if (data) {
-    console.log(data[0]);
+    console.log(data[5]);
   }
 
   return (
     <div className="container">
-      {data ? <SinglePitch pitch={data[1]} /> : "Loading..."}
-      {data ? <GameDetails pitch={data[1]} /> : "Loading..."}
+      {data ? <SinglePitch pitch={data[5]} /> : "Loading..."}
+      {data ? <GameDetails pitch={data[5]} /> : "Loading..."}
     </div>
   );
 }

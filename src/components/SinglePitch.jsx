@@ -3,13 +3,12 @@ import axios from "axios"; // Note: 'axios' is imported but not used in the prov
 import "../styles/SinglePitch.css";
 
 const SinglePitch = ({ pitch }) => {
-  console.log(pitch);
 
   return (
     <table className="pitch-table">
       <thead>
         <tr>
-          <th colSpan={2}>Pitch Details</th>
+          <th colSpan={2}>Pitch Details (selected)</th>
         </tr>
       </thead>
       <tbody>
@@ -41,7 +40,7 @@ const SinglePitch = ({ pitch }) => {
           <td>Pitch Speed at Release</td>
           <td>
             {pitch && pitch.initial_speed
-              ? parseFloat(pitch.initial_speed).toFixed(2) + " MPH"
+              ? parseFloat(pitch.initial_speed).toFixed(0) + " MPH"
               : "N/A"}
           </td>
         </tr>
