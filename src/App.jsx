@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="container">
-      {data ? <SinglePitch pitch={data[0]} /> : "Loading..."}
+      {data ? <SinglePitch pitch={data[1]} /> : "Loading..."}
     </div>
   );
 }
