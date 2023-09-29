@@ -13,6 +13,14 @@ const SinglePitch = ({ pitch }) => {
         </tr>
       </thead>
       <tbody>
+      <tr>
+          <td>Strike Zone (Top)</td>
+          <td>
+            {pitch && pitch.sz_top
+              ? parseFloat(pitch.sz_top).toFixed(2) + " FT"
+              : "N/A"}
+          </td>
+        </tr>
         <tr>
           <td>Strike Zone (Top)</td>
           <td>

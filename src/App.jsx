@@ -4,6 +4,7 @@ import './App.css'
 
 // Components
 import SinglePitch from "./components/SinglePitch";
+import GameDetails from "./components/GameDetails";
 
 function App() {
   const [data, setData] = useState(null);
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="container">
       {data ? <SinglePitch pitch={data[1]} /> : "Loading..."}
+      {data ? <GameDetails pitch={data[1]} /> : "Loading..."}
     </div>
   );
 }
