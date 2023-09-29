@@ -4,12 +4,17 @@
     margin: 20px 0;
 }
 
-.pitch-table th, .pitch-table td {
+.pitches-table th, .pitches-table td {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.pitch-table th {
+.pitches-table th {
     background-color: #f2f2f2;
     text-align: left;
 }
+
+.pitches-table tbody tr:hover {
+    cursor: pointer;
+  }
+  

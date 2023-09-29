@@ -1,0 +1,6 @@
+.pitches-table thead th {
+    background-color: #f2f2f2;  /* to ensure the background isn't transparent */
+    position: sticky;
+    top: 0;
+    z-index: 10;  /* to ensure headers are above the table rows */
+  }
