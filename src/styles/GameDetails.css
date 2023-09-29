@@ -1,0 +1,15 @@
+.pitch-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.pitch-table th, .pitch-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.pitch-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}

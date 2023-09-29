@@ -1,6 +1,11 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;  /* This ensures the container takes the full viewport height */
+  height: 100vh; 
+}
+.scroll-table {
+  max-height: 500px; /* Adjust based on your preference */
+  overflow-y: auto;
 }
