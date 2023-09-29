@@ -34,8 +34,10 @@ function App() {
           <div className="scroll-table">
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
-          {selectedPitch && <SinglePitch pitch={selectedPitch} />}
-          {selectedPitch && <GameDetails pitch={selectedPitch} />}
+          <div className="details-container">
+            {selectedPitch && <SinglePitch pitch={selectedPitch} />}
+            {selectedPitch && <GameDetails pitch={selectedPitch} />}
+          </div>
         </>
       ) : (
         "Loading..."

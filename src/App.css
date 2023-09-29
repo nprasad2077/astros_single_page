@@ -1,11 +1,18 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
+  padding: 20px; 
 }
 .scroll-table {
   max-height: 500px; /* Adjust based on your preference */
   overflow-y: auto;
+}
+.details-container{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 2rem;
 }
