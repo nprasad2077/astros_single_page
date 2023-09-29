@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './App.css'
 
 // Components
 import SinglePitch from "./components/SinglePitch";
@@ -23,11 +24,13 @@ function App() {
     getAstrosData();
   }, []);
 
-  console.log(data[0]);
+  if (data) {
+    console.log(data[0]);
+  }
 
   return (
-    <div>
-      <SinglePitch pitch={data[0]} />
+    <div className="container">
+      {data ? <SinglePitch pitch={data[0]} /> : "Loading..."}
     </div>
   );
 }

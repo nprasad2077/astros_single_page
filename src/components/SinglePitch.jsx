@@ -7,7 +7,7 @@ const SinglePitch = ({ pitch }) => {
   console.log((pitch));
 
   return (
-    <div>
+ 
       <table className="pitch-table">
         <thead>
           <tr>
@@ -20,12 +20,12 @@ const SinglePitch = ({ pitch }) => {
               Strike Zone (Top)
             </td>
             <td>
-              {pitch.sz_top}
+              {pitch && pitch.sz_top ? parseFloat(pitch.sz_top).toFixed(2) : 'N/A'}
             </td>
           </tr>
         </tbody>
       </table>
-    </div>
+ 
   );
 };
 
