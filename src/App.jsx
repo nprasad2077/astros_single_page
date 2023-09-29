@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import './App.css'
+import "./App.css";
 
 // Components
 import SinglePitch from "./components/SinglePitch";
 import GameDetails from "./components/GameDetails";
+import PitchesTable from "./components/PitchesTable";
 
 function App() {
   const [data, setData] = useState(null);
+  const [selectedPitch, setSelectedPitch] = useState(null);
 
   useEffect(() => {
     const getAstrosData = async () => {
@@ -25,14 +27,19 @@ function App() {
     getAstrosData();
   }, []);
 
-  if (data) {
-    console.log(data[5]);
-  }
-
   return (
     <div className="container">
-      {data ? <SinglePitch pitch={data[5]} /> : "Loading..."}
-      {data ? <GameDetails pitch={data[5]} /> : "Loading..."}
+      {data ? (
+        <>
+          <div className="scroll-table">
+            <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
+          </div>
+          {selectedPitch && <SinglePitch pitch={selectedPitch} />}
+          {selectedPitch && <GameDetails pitch={selectedPitch} />}
+        </>
+      ) : (
+        "Loading..."
+      )}
     </div>
   );
 }
