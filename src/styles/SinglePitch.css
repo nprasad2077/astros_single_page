@@ -1,5 +1,5 @@
 .pitch-table {
-    width: 60%;
+    width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
@@ -10,8 +10,8 @@
 }
 
 .pitches-table th {
-    background-color: #f2f2f2;
-    text-align: left;
+    background-color: #333;
+    text-align: center;
 }
 
 .pitches-table tbody tr:hover {
