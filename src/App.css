@@ -1,21 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #07142c;
+}
+
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px; 
+  padding: 20px;
 }
+
+.navbar {
+  width: 100%;
+}
+
 .scroll-table {
   max-height: 500px; /* Adjust based on your preference */
   overflow-y: auto;
+  width: 100%;
 }
-.details-container{
+
+.details-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
   margin-left: 2rem;
+  width: 100%;
 }
-body {
-  background-color: #07142c;
+
+.pitches-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* padding: 20px; */
 }

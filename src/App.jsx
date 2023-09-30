@@ -6,6 +6,7 @@ import "./App.css";
 import SinglePitch from "./components/SinglePitch";
 import GameDetails from "./components/GameDetails";
 import PitchesTable from "./components/PitchesTable";
+import Header from "./components/Header";
 
 function App() {
   const [data, setData] = useState(null);
@@ -28,6 +29,7 @@ function App() {
   }, []);
 
   return (
+    <>
     <div className="container">
       {data ? (
         <>
@@ -43,6 +45,7 @@ function App() {
         "Loading..."
       )}
     </div>
+    </>
   );
 }
 
