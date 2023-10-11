@@ -4,12 +4,12 @@ const PitchesTable = ({ data, onSelectPitch }) => {
   return (
     <div className="overflow-x-auto max-h-screen" data-theme='business'>
       <table className=" table table-auto table-sm table-zebra cursor-pointer table-pin-rows border-separate border-spacing-1 border border-slate-500">
-        <thead className="text-md">
+        <thead className="text-base text-center text-white">
           <tr>
-            <th className="bg-slate-900 border border-slate-600">Inning & Count</th>
-            <th className="bg-slate-900  border border-slate-600">Pitch Type & Speed</th>
-            <th className="bg-slate-900  border border-slate-600">Batter vs. Pitcher</th>
-            <th className="bg-slate-900  border border-slate-600">Outcome</th>
+            <th className="bg-slate-800 border border-slate-600">Inning & Count</th>
+            <th className="bg-slate-800  border border-slate-600">Pitch Type & Speed</th>
+            <th className="bg-slate-800  border border-slate-600">Batter vs. Pitcher</th>
+            <th className="bg-slate-800  border border-slate-600">Outcome</th>
           </tr>
         </thead>
         <tbody>

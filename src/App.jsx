@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex bg-zinc-500">
+    <div className="flex bg-black mt-4 mb-4">
       {data ? (
         <>
           <div className="p-2 ml-2">

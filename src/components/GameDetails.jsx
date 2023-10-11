@@ -3,10 +3,10 @@ import React from "react";
 const GameDetails = ({ pitch }) => {
   return (
     <div className="overflow-x-auto overflow-y-auto">
-      <table data-theme="business" className="table table-lg table-zebra w-full">
+      <table data-theme="business" className="table table-fixed table-lg table-zebra w-full">
         <thead className="text-center">
           <tr>
-            <th colSpan={2}>Game Details (selected)</th>
+            <th className="text-white text-lg"  colSpan={2}>Game Details (selected)</th>
           </tr>
         </thead>
         <tbody>
