@@ -10,7 +10,9 @@ const SinglePitch = ({ pitch }) => {
       >
         <thead>
           <tr className="text-center">
-            <th className="bg-orange-500 text-black text-lg"  colSpan={2}>Pitch Details (selected)</th>
+            <th className="bg-orange-500 text-black text-lg" colSpan={2}>
+              Pitch Details (selected)
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -115,7 +117,9 @@ const SinglePitch = ({ pitch }) => {
             </td>
           </tr>
           <tr className="hover">
-            <td className="border border-orange-500">Plate Speed (Speed of ball when crossing plate)</td>
+            <td className="border border-orange-500">
+              Plate Speed (Speed of ball when crossing plate)
+            </td>
             <td className="border border-orange-500">
               {pitch && pitch.plate_speed
                 ? parseFloat(pitch.plate_speed).toFixed(2) + " MPH"
