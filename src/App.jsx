@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
 
 // Components
 import SinglePitch from "./components/SinglePitch";
@@ -17,25 +16,37 @@ function App() {
         const response = await axios.get(
           "https://raw.githubusercontent.com/rd-astros/hiring-resources/master/pitches.json"
         );
-        // console.log(response.data.queryResults.row);
         setData(response.data.queryResults.row);
       } catch (error) {
         console.log(error);
       }
     };
-
     getAstrosData();
   }, []);
 
+  // Set Inital tables to display first row value.
+
+  useEffect(() => {
+    if (data) {
+      setSelectedPitch(data[0]);
+    }
+  }, [data]);
+
   return (
-    <div className="container">
+    <div className="flex bg-black mt-4 mb-4">
       {data ? (
         <>
-          <div className="scroll-table">
+          <div className="p-6">
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
-          {selectedPitch && <SinglePitch pitch={selectedPitch} />}
-          {selectedPitch && <GameDetails pitch={selectedPitch} />}
+          <div className="flex-col p-6">
+            <div className="flex-none">
+              {selectedPitch && <SinglePitch pitch={selectedPitch} />}
+            </div>
+            <div className="flex-none mt-10">
+              {selectedPitch && <GameDetails pitch={selectedPitch} />}
+            </div>
+          </div>
         </>
       ) : (
         "Loading..."
