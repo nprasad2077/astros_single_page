@@ -2,7 +2,7 @@ import React from "react";
 
 const GameDetails = ({ pitch }) => {
   return (
-    <table className="">
+    <table data-theme='business' className="w-full">
       <thead>
         <tr>
           <th colSpan={2}>Game Details (selected)</th>

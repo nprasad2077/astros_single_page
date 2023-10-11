@@ -32,8 +32,8 @@ function App() {
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
           <div className="flex-col">
-            <div className="flex-none">{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
-            <div className="flex-none">{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
+            <div className="flex-none ml-4">{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
+            <div className="flex-none ml-4 mt-2">{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
           </div>
         </>
       ) : (
