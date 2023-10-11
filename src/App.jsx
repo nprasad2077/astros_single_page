@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
 
 // Components
 import SinglePitch from "./components/SinglePitch";
@@ -26,14 +25,14 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="flex bg-slate-400">
       {data ? (
         <>
-          <div className="scroll-table">
+          <div className="">
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
-          {selectedPitch && <SinglePitch pitch={selectedPitch} />}
-          {selectedPitch && <GameDetails pitch={selectedPitch} />}
+          <div>{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
+          <div>{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
         </>
       ) : (
         "Loading..."

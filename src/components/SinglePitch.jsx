@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios"; // Note: 'axios' is imported but not used in the provided code.
-import "../styles/SinglePitch.css";
+// import "../styles/SinglePitch.css";
 
 const SinglePitch = ({ pitch }) => {
 

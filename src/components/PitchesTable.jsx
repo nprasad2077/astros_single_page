@@ -1,15 +1,14 @@
 import React from "react";
-import "../styles/PitchesTable.css";
 
 const PitchesTable = ({ data, onSelectPitch }) => {
   return (
-    <table className="pitches-table">
+    <table className="border-seperate border-spacing-3 border border-slate-500">
       <thead>
         <tr>
-            <th>Inning & Count</th>
-            <th>Pitch Type & Speed</th>
-            <th>Batter vs. Pitcher</th>
-            <th>Outcome</th>
+            <th className="border border-slate-600">Inning & Count</th>
+            <th className="border border-slate-600">Pitch Type & Speed</th>
+            <th className="border border-slate-600">Batter vs. Pitcher</th>
+            <th className="border border-slate-600">Outcome</th>
         </tr>
       </thead>
       <tbody>
