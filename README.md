@@ -6,25 +6,16 @@
 
 - Open a terminal instance in this repository and run the command:
 
-  
-
-  ```bash
-  npm install
-  ```
-
-  
-
+```bash
+npm install
+```
 - Then, launch the local application by running: 
 
 ```bash
 npm run dev
 ```
 
-
-
 ## Usage
-
-
 
 This is a simple one-page application designed to let users explore and dive deeper into Astros game data. 
 
