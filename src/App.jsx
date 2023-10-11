@@ -24,6 +24,14 @@ function App() {
     getAstrosData();
   }, []);
 
+  // Set Inital tables to display first row value.
+
+  useEffect(() => {
+    if (data) {
+      setSelectedPitch(data[0]);
+    }
+  }, [data]);
+
   return (
     <div className="flex bg-black mt-4 mb-4">
       {data ? (
@@ -32,8 +40,12 @@ function App() {
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
           <div className="flex-col p-6">
-            <div className="flex-none">{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
-            <div className="flex-none mt-10">{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
+            <div className="flex-none">
+              {selectedPitch && <SinglePitch pitch={selectedPitch} />}
+            </div>
+            <div className="flex-none mt-10">
+              {selectedPitch && <GameDetails pitch={selectedPitch} />}
+            </div>
           </div>
         </>
       ) : (
