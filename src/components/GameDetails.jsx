@@ -1,9 +1,8 @@
 import React from "react";
-import "../styles/GameDetails.css";
 
 const GameDetails = ({ pitch }) => {
   return (
-    <table className="pitch-table">
+    <table className="">
       <thead>
         <tr>
           <th colSpan={2}>Game Details (selected)</th>

@@ -2,26 +2,36 @@ import React from "react";
 
 const PitchesTable = ({ data, onSelectPitch }) => {
   return (
-    <table className="border-seperate border-spacing-3 border border-slate-500">
-      <thead>
-        <tr>
-            <th className="border border-slate-600">Inning & Count</th>
-            <th className="border border-slate-600">Pitch Type & Speed</th>
-            <th className="border border-slate-600">Batter vs. Pitcher</th>
-            <th className="border border-slate-600">Outcome</th>
-        </tr>
-      </thead>
-      <tbody>
-      {data.map((pitch, index) => (
-          <tr key={index} onClick={() => onSelectPitch(pitch)}>
-            <td>{pitch.inning_half === '0' ? 'TOP' : 'BOTTOM'} {pitch.inning} ({pitch.strikes}-{pitch.balls})</td>
-            <td>{pitch.pitch_type} | {parseFloat(pitch.initial_speed).toFixed(0)} MPH </td>
-            <td>{pitch.batter_name} vs {pitch.pitcher_name}</td>
-            <td>{pitch.event_type}</td>
+    <div className="overflow-x-auto max-h-screen" data-theme='business'>
+      <table className=" table table-auto table-sm table-zebra cursor-pointer table-pin-rows border-separate border-spacing-1 border border-slate-500">
+        <thead className="text-md">
+          <tr>
+            <th className="bg-slate-900 border border-slate-600">Inning & Count</th>
+            <th className="bg-slate-900  border border-slate-600">Pitch Type & Speed</th>
+            <th className="bg-slate-900  border border-slate-600">Batter vs. Pitcher</th>
+            <th className="bg-slate-900  border border-slate-600">Outcome</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((pitch, index) => (
+            <tr key={index} onClick={() => onSelectPitch(pitch)}>
+              <td className="border border-slate-700">
+                {pitch.inning_half === "0" ? "TOP" : "BOTTOM"} {pitch.inning} (
+                {pitch.strikes}-{pitch.balls})
+              </td>
+              <td className="border border-slate-700">
+                {pitch.pitch_type} |{" "}
+                {parseFloat(pitch.initial_speed).toFixed(0)} MPH{" "}
+              </td>
+              <td className="border border-slate-700">
+                {pitch.batter_name} vs {pitch.pitcher_name}
+              </td>
+              <td className="border border-slate-700">{pitch.event_type}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

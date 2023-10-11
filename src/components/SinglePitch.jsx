@@ -1,11 +1,10 @@
 import React from "react";
 import axios from "axios"; // Note: 'axios' is imported but not used in the provided code.
-// import "../styles/SinglePitch.css";
 
 const SinglePitch = ({ pitch }) => {
 
   return (
-    <table className="pitch-table">
+    <table className="">
       <thead>
         <tr>
           <th colSpan={2}>Pitch Details (selected)</th>
