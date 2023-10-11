@@ -17,13 +17,11 @@ function App() {
         const response = await axios.get(
           "https://raw.githubusercontent.com/rd-astros/hiring-resources/master/pitches.json"
         );
-        // console.log(response.data.queryResults.row);
         setData(response.data.queryResults.row);
       } catch (error) {
         console.log(error);
       }
     };
-
     getAstrosData();
   }, []);
 
