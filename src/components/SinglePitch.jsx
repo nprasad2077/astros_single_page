@@ -3,15 +3,15 @@ import axios from "axios"; // Note: 'axios' is imported but not used in the prov
 
 const SinglePitch = ({ pitch }) => {
   return (
-    <div className="overflow-x-auto">
-      <table data-theme="business" className="table w-full">
+    <div className="overflow-x-auto max-h-50vh">
+      <table data-theme="business" className="table table-lg w-full table-fixed">
         <thead>
-          <tr>
+          <tr className="text-center">
             <th colSpan={2}>Pitch Details (selected)</th>
           </tr>
         </thead>
         <tbody>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Strike Zone (Top)</td>
             <td>
               {pitch && pitch.sz_top
@@ -19,7 +19,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Strike Zone (Top)</td>
             <td>
               {pitch && pitch.sz_top
@@ -27,7 +27,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Strike Zone (Bottom)</td>
             <td>
               {pitch && pitch.sz_bottom
@@ -35,7 +35,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Pitch Speed at Release</td>
             <td>
               {pitch && pitch.initial_speed
@@ -43,7 +43,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>
               Initial Position (Ball position at release in pitcher's hand)
             </td>
@@ -67,7 +67,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Initial Velocity</td>
             <td>
               {pitch
@@ -89,7 +89,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Initial Acceleration</td>
             <td>
               {pitch
@@ -111,7 +111,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Plate Speed (Speed of ball when crossing plate)</td>
             <td>
               {pitch && pitch.plate_speed
@@ -119,7 +119,7 @@ const SinglePitch = ({ pitch }) => {
                 : "N/A"}
             </td>
           </tr>
-          <tr className='hover'>
+          <tr className="hover">
             <td>Position at Plate</td>
             <td>
               {pitch

@@ -28,12 +28,12 @@ function App() {
     <div className="flex bg-zinc-500">
       {data ? (
         <>
-          <div className="">
+          <div className="p-2 ml-2">
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
-          <div className="flex-col">
-            <div className="flex-none ml-4">{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
-            <div className="flex-none ml-4 mt-2">{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
+          <div className="flex-col mr-2">
+            <div className="flex-none p-2">{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
+            <div className="flex-none p-2 mt-10">{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
           </div>
         </>
       ) : (
