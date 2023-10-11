@@ -31,8 +31,10 @@ function App() {
           <div className="">
             <PitchesTable data={data} onSelectPitch={setSelectedPitch} />
           </div>
-          <div>{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
-          <div>{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
+          <div className="flex-col">
+            <div className="flex-none">{selectedPitch && <SinglePitch pitch={selectedPitch} />}</div>
+            <div className="flex-none">{selectedPitch && <GameDetails pitch={selectedPitch} />}</div>
+          </div>
         </>
       ) : (
         "Loading..."
